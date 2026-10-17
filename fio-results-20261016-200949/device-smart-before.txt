@@ -1,0 +1,12 @@
+/dev/nvme1n1p1: Permission denied
+[1mUsage: nvme smart-log <device> [OPTIONS][0m
+
+Retrieve SMART log for the given device (or optionally a namespace) in either
+decoded format (default) or binary.
+
+[1mOptions:[0m
+  [  --verbose, -v ]                    --- Increase output verbosity
+  [  --output-format=<FMT>, -o <FMT> ]  --- Output format: normal|json|binary
+  [  --namespace-id=<NUM>, -n <NUM> ]   --- (optional) desired namespace
+  [  --raw-binary, -b ]                 --- output in binary format
+  [  --human-readable, -H ]             --- show info in readable format
