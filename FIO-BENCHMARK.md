@@ -2,6 +2,10 @@
 
 `scripts/fio-profile.sh` runs file-based FIO workloads and reports completion-latency P95, P99, and P99.9. It does not issue I/O to a raw device. It requires both the backing block device and an absolute path to a **new** test file on that device; existing files are deliberately refused.
 
+## Project Report
+
+The full report for the project with full results and analysis are available in `./Report`.
+
 ## Requirements and safe invocation
 
 Install `fio`, `util-linux` (`lsblk` and `findmnt`), and Python 3. On Linux, the script verifies that the test-file filesystem is on the selected device (or one of its partitions) and refuses devices that back `/`, `/boot`, or `/boot/efi`. The output folder can be elsewhere.
