@@ -194,12 +194,12 @@ def save_queue_depth(jobs, output_dir: Path) -> None:
                         key=lambda item: item[0])
         if not subset:
             continue
-        color, marker = styles[(direction, "P99")]
-        latencies = [record[2]["P99"] for record in subset]
+        color, marker = styles[(direction, "Mean")]
+        latencies = [record[2]["Mean"] for record in subset]
         bandwidths = [record[3] for record in subset]
         ax.plot(latencies, bandwidths, color=color, marker=marker,
                 linestyle="--",
-                label=f"{direction.title()} {"P99"}")
+                label=f"{direction.title()} {"Mean"}")
         for record, x, y in zip(subset, latencies, bandwidths):
             ax.annotate(f"QD {record[0]}", (x, y), xytext=(4, 4),
                         textcoords="offset points", fontsize=8, rotation=45)
